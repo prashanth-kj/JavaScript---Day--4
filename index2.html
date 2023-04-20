@@ -1,0 +1,30 @@
+<DOCTYPE html>
+    <html>
+         <head>
+             <title> Guvi_js day3</title>
+         </head>
+         <body>
+              <h1>hello</h1>
+              <h2>welcome to XMLHttpRequest in html</h2>
+           <script>
+               console.log("welcometo html js");
+
+               function handledata()
+               {
+                  const countries=(JSON.parse(this.responseText));
+
+                  for(let i=0;i<countries.length;i++)
+                  {
+                      //console.log(countries[i].flags.svg);
+                      console.log("country name:" + countries[i].name.common +", region:" +countries[i].region +", subregion:" +countries[i].subregion +", population:" + countries[i].population);
+                  }
+               }
+
+               const req =new XMLHttpRequest();
+               req.addEventListener('load',handledata);
+               req.open("GET","https://restcountries.com/v3.1/all");
+               req.send();
+
+           </script>   
+         </body>
+    </html>
