@@ -1,8 +1,6 @@
 1. how to compare two JSON have the same propperties without order:
 ------------------------------------------------------------------
 
-
-
 //JSON for in looop:
 -----------------
 
