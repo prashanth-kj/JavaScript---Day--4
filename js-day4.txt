@@ -1,0 +1,45 @@
+//JSON for in looop:
+-----------------
+
+let obj1 ={name:"person1", age:5};
+let obj2 ={age:5 ,name:"person1"};
+
+let flag =true;
+
+ for(let e in obj1)
+ {
+     if(obj1[e]!==obj2 [e])
+     {
+         flag = false;
+         break;
+     }
+ }
+ flag?console.log("equal"):console.log("unequal");
+-------------------------------------------------------------
+
+//object-keys method:
+--------------------
+
+let obj1 ={name:"person1", age:5};
+let obj2 ={age:5 ,name:"person1"};
+
+let key1 =Object.keys(obj1);
+let key2 =Object.keys(obj2);
+
+let flag = true;
+
+if(key1.length === key2.length)
+{
+    for(let e in key1)
+    {
+         if(obj1[e]!==obj2[e])
+         {
+             flag = false;
+             break;
+         }
+    }
+}
+else
+     flag= false;
+     
+flag?console.log("equal"):console.log("unequal")
